@@ -1,0 +1,61 @@
+
+
+$maincolor : #ff0000;
+
+.wow-enter {
+  opacity : 0
+}
+
+.wow-enter-active {
+  opacity : 1;
+  transition : all 500ms;
+}
+.red {
+    color :$maincolor;
+  }
+
+//   div.container h4 {
+//     color : blue;
+//   }
+//   div.container p {
+//     color : green;
+//   }
+
+  div.container {
+    h4 {
+      color : blue;
+    }
+    p {
+      color : green;
+    }
+  }
+
+//   .my-alert {
+//     background : #eeeeee;
+//     padding : 15px;
+//     border-radius : 5px;
+//     max-width : 500px;
+//     width : 100%;
+//     margin : auto;
+//   }
+@mixin  함수() {
+    background : #eeeeee;
+    padding : 15px;
+    border-radius : 5px;
+    max-width : 500px;
+    width : 100%;
+    margin : auto;
+  }
+.my-alert {
+   @include 함수()
+  }
+  .my-alert2 {
+      @extend .my-alert;
+      background : #ffe501;
+
+  }
+
+
+  .my-alert p {
+    margin-bottom : 0;
+  }
